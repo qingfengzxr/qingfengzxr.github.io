@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Welcome to github pages!"
+date:   2020-07-08 20:14:39 +0800
+categories: jekyll update
+---
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/qingfengzxr/qingfengzxr.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
