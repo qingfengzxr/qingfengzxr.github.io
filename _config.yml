@@ -102,4 +102,4 @@ deploy:
   type: git
   repo: https://github.com/qingfengzxr/qingfengzxr.github.io
   branch: master
-  message: Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }})
+  message: (Site update {{ now('YYYY-MM-DD HH:mm:ss') }})
