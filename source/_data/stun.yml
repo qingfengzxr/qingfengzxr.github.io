@@ -52,8 +52,8 @@ sougou_site_verification:
 menu:
   home: / || fas fa-home
   archives: /archives/ || fas fa-folder-open
-  # categories: /categories/ || fas fa-layer-group
-  # tags: /tags/ || fas fa-tags
+  categories: /categories/ || fas fa-layer-group
+  tags: /tags/ || fas fa-tags
   # You can add a secondary menu like follow.
   # xxx1: javascript:; || fa(s|r|l|d|b) fa-xxx
 
@@ -130,7 +130,7 @@ layout:
 
 # The header of site.
 header:
-  enable: true
+  enable: false
   show_on:
     # Whether to show on the article page.
     post: true
@@ -152,7 +152,7 @@ header:
     # Height of the navigation bar (Supports all CSS units)
     height: 50px
     # Background color of the navigation bar (Please use "" to wrap the value).
-    bg_color: "#333"
+    bg_color: "#4B0082"
   # The icon that prompts the user to pull down.
   scroll_down_icon:
     enable: false
@@ -625,7 +625,7 @@ local_search:
 canvas_ribbon:
   enable: false
   # The width of the ribbon.
-  size: 120
+  size: 300
   # The transparency of the ribbon.
   alpha: 0.6
   # The display level of the ribbon.
@@ -634,14 +634,14 @@ canvas_ribbon:
 # Canvas-nest
 # Dependency: https://github.com/hustcc/canvas-nest.js
 canvas_nest:
-  enable: false
+  enable: true
   # Color of lines.
   # RGB values, use `,` to separate.
   color: "0,0,0"
   # The opacity of lines (value: 0 ~ 1)
   opacity: 0.6
   # The number of lines.
-  count: 99
+  count: 200
   # `z-index` property of the background.
   zIndex: -1
 
