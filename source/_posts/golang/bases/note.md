@@ -1,5 +1,5 @@
 ---
-title: 基础骨架
+title: Golang - 基础骨架
 categories: 
 - [golang, base]
 tags: 
@@ -337,6 +337,7 @@ import(
 ```go
 import _ "image/png"	//注册PNG解码器	
 ```
+
 
 
 
