@@ -2,7 +2,7 @@
 title: learning_plan
 date: 2020-07-21 20:37:32
 categories:
-- ponder
+- plan
 tags:
 - learning-plan
 ---
