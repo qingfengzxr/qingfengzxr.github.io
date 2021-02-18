@@ -36,10 +36,10 @@ var CONFIG = {
 
 window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">在下的小书架</div><div class="header-banner-info__subtitle">对一件事理解的越深，就能做的越好！</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Golang - 基础骨架</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-07-17</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-07-17</span></span></div></header><div class="post-body">
         <h1 id="GOLANG"   >
-          <a href="#GOLANG" class="heading-link"><i class="fas fa-link"></i></a>GOLANG</h1>
+          <a href="#GOLANG" class="heading-link"><i class="fas fa-link"></i></a><a href="#GOLANG" class="headerlink" title="GOLANG"></a>GOLANG</h1>
       
         <h4 id="GO语言的特性"   >
-          <a href="#GO语言的特性" class="heading-link"><i class="fas fa-link"></i></a>GO语言的特性</h4>
+          <a href="#GO语言的特性" class="heading-link"><i class="fas fa-link"></i></a><a href="#GO语言的特性" class="headerlink" title="GO语言的特性"></a>GO语言的特性</h4>
       <ol>
 <li><p>GO语言是按值调用语言。</p>
 </li>
@@ -52,7 +52,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </ol>
 
         <h4 id="GO语言的实用功能包"   >
-          <a href="#GO语言的实用功能包" class="heading-link"><i class="fas fa-link"></i></a>GO语言的实用功能包</h4>
+          <a href="#GO语言的实用功能包" class="heading-link"><i class="fas fa-link"></i></a><a href="#GO语言的实用功能包" class="headerlink" title="GO语言的实用功能包"></a>GO语言的实用功能包</h4>
       <ol>
 <li>golang.org/x/net/html:</li>
 </ol>
@@ -62,7 +62,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </ol>
 
         <h4 id="变量"   >
-          <a href="#变量" class="heading-link"><i class="fas fa-link"></i></a>变量</h4>
+          <a href="#变量" class="heading-link"><i class="fas fa-link"></i></a><a href="#变量" class="headerlink" title="变量"></a>变量</h4>
       <ul>
 <li>短变量声明</li>
 </ul>
@@ -74,7 +74,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <p>短变量声明最少声明一个新变量，否则编译不通过。</p>
 
         <h4 id="slice"   >
-          <a href="#slice" class="heading-link"><i class="fas fa-link"></i></a>slice</h4>
+          <a href="#slice" class="heading-link"><i class="fas fa-link"></i></a><a href="#slice" class="headerlink" title="slice"></a>slice</h4>
       <figure class="highlight go"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//slice操作符s[i:j]</span></span><br><span class="line"><span class="comment">//数据结构如下</span></span><br><span class="line"><span class="comment">// src/runtime/slice.go(go.19.1)</span></span><br><span class="line"><span class="keyword">type</span> slice <span class="keyword">struct</span>&#123;</span><br><span class="line">    array unsafe.Pointer <span class="comment">//指向底层数组的指针</span></span><br><span class="line">    <span class="built_in">len</span> <span class="keyword">int</span> <span class="comment">//slice元素数量</span></span><br><span class="line">    <span class="built_in">cap</span> <span class="keyword">int</span> <span class="comment">//底层数组的容量</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 <ol>
@@ -89,7 +89,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </ol>
 
         <h4 id="map"   >
-          <a href="#map" class="heading-link"><i class="fas fa-link"></i></a>map</h4>
+          <a href="#map" class="heading-link"><i class="fas fa-link"></i></a><a href="#map" class="headerlink" title="map"></a>map</h4>
       <figure class="highlight go"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建一个map</span></span><br><span class="line">ages = <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">int</span>) <span class="comment">//创建了一个键为string值为int的map</span></span><br><span class="line"><span class="comment">//初始化</span></span><br><span class="line">ages := <span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">int</span>&#123;</span><br><span class="line">	<span class="string">"alice"</span>:<span class="number">31</span>,</span><br><span class="line">	<span class="string">"charlie"</span>:<span class="number">34</span>,</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//or </span></span><br><span class="line">ages[<span class="string">"alice"</span>] = <span class="number">31</span></span><br></pre></td></tr></table></div></figure>
 
 <ol>
@@ -98,7 +98,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </ol>
 
         <h4 id="函数"   >
-          <a href="#函数" class="heading-link"><i class="fas fa-link"></i></a>函数</h4>
+          <a href="#函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#函数" class="headerlink" title="函数"></a>函数</h4>
       <ul>
 <li>函数定义</li>
 </ul>
@@ -126,7 +126,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </ol>
 
         <h4 id="结构体"   >
-          <a href="#结构体" class="heading-link"><i class="fas fa-link"></i></a>结构体</h4>
+          <a href="#结构体" class="heading-link"><i class="fas fa-link"></i></a><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h4>
       <ul>
 <li>示例</li>
 </ul>
@@ -165,7 +165,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </ol>
 
         <h4 id="方法"   >
-          <a href="#方法" class="heading-link"><i class="fas fa-link"></i></a>方法</h4>
+          <a href="#方法" class="heading-link"><i class="fas fa-link"></i></a><a href="#方法" class="headerlink" title="方法"></a>方法</h4>
       <figure class="highlight go"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//方法的声明和普通函数的声明类似，只是在函数名字前面多了一个参数。这个参数把这个方法绑定到这个参数对应的类型上。</span></span><br><span class="line"><span class="keyword">package</span> geometry</span><br><span class="line"><span class="keyword">import</span> <span class="string">"math"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Point <span class="keyword">struct</span>&#123;X,Y <span class="keyword">float64</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//普通的函数</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Distance</span><span class="params">(p,q Point)</span> <span class="title">float64</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span> math.Hypot(q.X-p.X,q.Y-p.Y)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Point类型的方法</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(p Point)</span> <span class="title">Distance</span><span class="params">(q Point)</span> <span class="title">float64</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> math.Hypot(q.X-p.X,q.Y-p.Y)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//附加的参数p,称为方法的接收者，用来描述主调方法就像向对象发送消息。</span></span><br><span class="line"><span class="comment">//调用方法的时候，接收者在方法名的前面。这样就和声明保持一致。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//上面两个Distance函数声明没有冲突。</span></span><br><span class="line"><span class="comment">//第一个声明一个包级别的函数，称为 geometry.Distance </span></span><br><span class="line"><span class="comment">//第二个声明一个类型Point的方法，因此它的名字是Point.Distance</span></span><br></pre></td></tr></table></div></figure>
 
 <ol>
@@ -176,7 +176,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </ol>
 
         <h4 id="接口"   >
-          <a href="#接口" class="heading-link"><i class="fas fa-link"></i></a>接口</h4>
+          <a href="#接口" class="heading-link"><i class="fas fa-link"></i></a><a href="#接口" class="headerlink" title="接口"></a>接口</h4>
       <figure class="highlight go"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//一个接口类型定义了一套方法，如果一个具体类型要实现该接口，那么必须实现接口类型定义中的所有方法</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="keyword">type</span> Reader <span class="keyword">interface</span>&#123;</span><br><span class="line">    Read(p []<span class="keyword">byte</span>)(n <span class="keyword">int</span>,err error)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 <ul>
@@ -189,7 +189,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <p>注意：接口类型是非平凡的。应该仅在能确认接口值包含的动态值可以比较时，才比较接口值。否则会导致崩溃。</p>
 
         <h4 id="反射"   >
-          <a href="#反射" class="heading-link"><i class="fas fa-link"></i></a>反射</h4>
+          <a href="#反射" class="heading-link"><i class="fas fa-link"></i></a><a href="#反射" class="headerlink" title="反射"></a>反射</h4>
       <p>####　包和ｇo工具</p>
 <p>众所周知，ＧＯ程序的编译速度比其他语言快，即便从零开始也是如此。这里有三个主要原因。</p>
 <p>第一，所有的导入都必须在每一个源文件的开头显式列出，这样编译器在确定依赖性的时候就不需要读取和处理整个文件；</p>

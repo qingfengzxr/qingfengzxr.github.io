@@ -28,7 +28,21 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">在下的小书架</div><div class="header-banner-info__subtitle">对一件事理解的越深，就能做的越好！</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/07/17/C/note/">C语言不知道的知识汇总</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-07-17</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-12-31</span></span></div></header><div class="post-body"><div class="post-excerpt"><ul>
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">在下的小书架</div><div class="header-banner-info__subtitle">对一件事理解的越深，就能做的越好！</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/07/17/DataStucture/DepthFistSearch/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/">深度优先搜索算法详解</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-07-17</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-12-30</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h4 id="深度优先搜索算法核心思想"   >
+          <a href="#深度优先搜索算法核心思想" class="heading-link"><i class="fas fa-link"></i></a><a href="#深度优先搜索算法核心思想" class="headerlink" title="深度优先搜索算法核心思想"></a>深度优先搜索算法核心思想</h4>
+      <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">深度优先搜索算法与广度优先搜索算法相对，二者都是针对图的遍历而言的。</span><br><span class="line">深度优先搜索算法的核心思想：</span><br><span class="line">	首先以一个未被访问过的顶点作为起始顶点，沿当前顶点的边走到未访问过的顶点;当没有未访问过的顶点时，则回到上一个顶点，继续试探访问别的顶点，直到所有的顶点都被访问过。</span><br><span class="line">	其特点是总是沿着图的某一分支遍历直到末端，然后回溯，再沿着另一条进行同样的遍历，直到所有顶点都被访问过。其回溯的特点十分贴合递归思想。</span><br></pre></td></tr></table></div></figure>
+
+
+        <h4 id="演示动图"   >
+          <a href="#演示动图" class="heading-link"><i class="fas fa-link"></i></a><a href="#演示动图" class="headerlink" title="演示动图"></a>演示动图</h4>
+      <p><img   src="https://github.com/qingfengzxr/Learning-Warehouse/blob/master/DataStucture/DepthFistSearch/map.gif?raw=true" style=""  alt=""></p>
+
+        <h4 id="深度优先搜索算法示例"   >
+          <a href="#深度优先搜索算法示例" class="heading-link"><i class="fas fa-link"></i></a><a href="#深度优先搜索算法示例" class="headerlink" title="深度优先搜索算法示例"></a>深度优先搜索算法示例</h4>
+      <figure class="highlight go"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"image"</span></span><br><span class="line">	<span class="string">"image/color"</span></span><br><span class="line">	<span class="string">"image/png"</span></span><br><span class="line">	<span class="string">"image/gif"</span></span><br><span class="line">	<span class="string">"log"</span></span><br><span class="line">	<span class="string">"os"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*================================== 地图类 ==============================*/</span></span><br><span class="line"><span class="keyword">type</span> Map <span class="keyword">struct</span>&#123;</span><br><span class="line">	SquareLen	<span class="keyword">int</span>			<span class="comment">//地图格子大小</span></span><br><span class="line">	Entinexty	[<span class="number">5</span>][<span class="number">4</span>]<span class="keyword">int</span>	<span class="comment">//地图数据</span></span><br><span class="line">	MapImage *image.Paletted</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//绘制地图</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(m *Map)</span> <span class="title">DrawTheMap</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> x := <span class="number">0</span>; x &lt; <span class="number">4</span>; x++ &#123;</span><br><span class="line">		<span class="keyword">for</span> y := <span class="number">0</span>; y &lt; <span class="number">5</span>; y++ &#123;</span><br><span class="line">			<span class="keyword">if</span> m.Entinexty[y][x] == <span class="number">1</span> &#123;</span><br><span class="line">				rect := image.Rect(x * m.SquareLen,y * m.SquareLen,(x+<span class="number">1</span>) * m.SquareLen,(y+<span class="number">1</span>) * m.SquareLen)</span><br><span class="line">				DrawRectangle(m.MapImage,rect,<span class="number">4</span>)</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> m.Entinexty[y][x] == <span class="number">2</span> &#123;</span><br><span class="line">				rect := image.Rect(x * m.SquareLen,y * m.SquareLen,(x+<span class="number">1</span>) * m.SquareLen,(y+<span class="number">1</span>) * m.SquareLen)</span><br><span class="line">				DrawRectangle(m.MapImage,rect,<span class="number">2</span>)</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> m.Entinexty[y][x] == <span class="number">3</span> &#123;</span><br><span class="line">				rect := image.Rect(x * m.SquareLen,y * m.SquareLen,(x+<span class="number">1</span>) * m.SquareLen,(y+<span class="number">1</span>) * m.SquareLen)</span><br><span class="line">				DrawRectangle(m.MapImage,rect,<span class="number">1</span>)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*============================= end =======================================*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*=========================== gif图绘制所需 ============================*/</span></span><br><span class="line"><span class="comment">//创建调色板</span></span><br><span class="line"><span class="keyword">var</span> palette = []color.Color&#123;</span><br><span class="line">	color.RGBA&#123;<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>&#125;,<span class="comment">//底板色彩</span></span><br><span class="line">	color.RGBA&#123;<span class="number">0</span>,<span class="number">255</span>,<span class="number">0</span>,<span class="number">255</span>&#125;,<span class="comment">//公主色彩</span></span><br><span class="line">	color.RGBA&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">255</span>,<span class="number">255</span>&#125;,<span class="comment">//已通过路径色彩</span></span><br><span class="line">	color.RGBA&#123;<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">255</span>&#125;,<span class="comment">//回退点色彩</span></span><br><span class="line">	color.RGBA&#123;<span class="number">177</span>,<span class="number">177</span>,<span class="number">0</span>,<span class="number">255</span>&#125;,<span class="comment">//障碍物色彩</span></span><br><span class="line">	color.RGBA&#123;<span class="number">0</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>&#125;,<span class="comment">//头部色彩</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> anim = gif.GIF&#123;LoopCount:<span class="number">510</span>&#125;	<span class="comment">//创建gif图像，并设置动画帧数为510</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> forwardImg  [<span class="number">255</span>]Map<span class="comment">//前进路径示意图临时存档数组</span></span><br><span class="line"><span class="keyword">var</span> rollbackImg	 [<span class="number">255</span>]Map<span class="comment">//回退路径示意图临时存放数组</span></span><br><span class="line"><span class="keyword">var</span> forwardCounter <span class="keyword">int</span> = <span class="number">0</span><span class="comment">//前进路径示意图计数</span></span><br><span class="line"><span class="keyword">var</span> rollbackCounter <span class="keyword">int</span> = <span class="number">0</span>	<span class="comment">//回退路径示意图计数</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//矩形绘制</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">DrawRectangle</span><span class="params">(img *image.Paletted,rect image.Rectangle,color <span class="keyword">uint8</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> x:= rect.Min.X; x &lt; rect.Max.X; x++ &#123;</span><br><span class="line">		<span class="keyword">for</span> y := rect.Min.Y; y &lt; rect.Max.Y; y++ &#123;</span><br><span class="line">			img.SetColorIndex(x,y,color)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*============================ end ======================================*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*========================= 骑士救公主 ^v^ ===============================*/</span></span><br><span class="line"><span class="comment">//地图内容</span></span><br><span class="line"><span class="keyword">var</span> MapArr = [<span class="number">5</span>][<span class="number">4</span>]<span class="keyword">int</span>&#123;	<span class="comment">//0: 可通过；1： 障碍物； 2：骑士； 3：公主</span></span><br><span class="line">	&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,&#125;,</span><br><span class="line">	&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,&#125;,</span><br><span class="line">	&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,&#125;,</span><br><span class="line">	&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">0</span>,&#125;,</span><br><span class="line">	&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,&#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//行走行为</span></span><br><span class="line"><span class="keyword">var</span> next = [<span class="number">4</span>][<span class="number">2</span>]<span class="keyword">int</span>&#123;</span><br><span class="line">	&#123;<span class="number">0</span>,<span class="number">1</span>&#125;,<span class="comment">//向右走</span></span><br><span class="line">	&#123;<span class="number">1</span>,<span class="number">0</span>&#125;,<span class="comment">//向下走</span></span><br><span class="line">	&#123;<span class="number">0</span>,<span class="number">-1</span>&#125;,<span class="comment">//向左走</span></span><br><span class="line">	&#123;<span class="number">-1</span>,<span class="number">0</span>&#125;,<span class="comment">//向上走</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 深度优先搜索算法实现</span></span><br><span class="line"><span class="keyword">var</span> min <span class="keyword">int</span> = <span class="number">99999</span>		<span class="comment">//最短路径</span></span><br><span class="line"><span class="keyword">var</span> book [<span class="number">5</span>][<span class="number">4</span>]<span class="keyword">int</span>		<span class="comment">//已行进坐标记录</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">dfs</span><span class="params">(m *Map , x <span class="keyword">int</span>, y <span class="keyword">int</span>, step <span class="keyword">int</span>, counter <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">	<span class="keyword">var</span> nextx,nexty <span class="keyword">int</span> </span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span> m.Entinexty[x][y] == <span class="number">3</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> step &lt; min &#123;</span><br><span class="line">			min = step</span><br><span class="line">		&#125; </span><br><span class="line">		<span class="keyword">return</span> </span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//枚举4种走法</span></span><br><span class="line">	<span class="keyword">for</span> k := <span class="number">0</span>; k &lt;= <span class="number">3</span>; k++ &#123;</span><br><span class="line">		nextx = x+next[k][<span class="number">0</span>]</span><br><span class="line">		nexty = y+next[k][<span class="number">1</span>]</span><br><span class="line">		<span class="keyword">if</span> nextx &lt; <span class="number">0</span> || nextx &gt;= <span class="number">5</span> || nexty &lt; <span class="number">0</span> || nexty &gt;= <span class="number">4</span> &#123;	<span class="comment">//越界</span></span><br><span class="line">			<span class="keyword">continue</span></span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">/*==== 分别为前进、后退绘制相应存图 =====*/</span></span><br><span class="line">		forwardImg[forwardCounter].SquareLen = <span class="number">60</span></span><br><span class="line">		forwardImg[forwardCounter].MapImage = image.NewPaletted(image.Rect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">240</span>, <span class="number">300</span>),palette)</span><br><span class="line">		forwardImg[forwardCounter].Entinexty = MapArr	</span><br><span class="line">		forwardImg[forwardCounter].DrawTheMap()</span><br><span class="line"></span><br><span class="line">		rollbackImg[forwardCounter].SquareLen = <span class="number">60</span></span><br><span class="line">		rollbackImg[forwardCounter].MapImage = image.NewPaletted(image.Rect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">240</span>, <span class="number">300</span>),palette)</span><br><span class="line">		rollbackImg[forwardCounter].Entinexty = MapArr	</span><br><span class="line">		rollbackImg[forwardCounter].DrawTheMap()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> _x := <span class="number">0</span>; _x &lt; <span class="number">4</span>; _x++ &#123;</span><br><span class="line">			<span class="keyword">for</span> _y := <span class="number">0</span>; _y &lt; <span class="number">5</span>; _y++ &#123;</span><br><span class="line">				<span class="keyword">if</span> ( book[_y][_x] == <span class="number">1</span> )&#123;</span><br><span class="line">					rect := image.Rect(_x * m.SquareLen, _y * m.SquareLen, (_x+<span class="number">1</span>) * m.SquareLen, (_y+<span class="number">1</span>) * m.SquareLen)</span><br><span class="line">					DrawRectangle(forwardImg[forwardCounter].MapImage,rect,<span class="number">2</span>)	</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">/*=====  end  =====*/</span></span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> m.Entinexty[nextx][nexty] == <span class="number">0</span> &amp;&amp; book[nextx][nexty] == <span class="number">0</span> || </span><br><span class="line">									m.Entinexty[nextx][nexty] == <span class="number">3</span> &#123;</span><br><span class="line">			book[nextx][nexty] = <span class="number">1</span>	<span class="comment">//记录当前路径</span></span><br><span class="line"></span><br><span class="line">			<span class="comment">/*==== 绘制前进图像 =====*/</span></span><br><span class="line">			rect := image.Rect(nexty * m.SquareLen, nextx*m.SquareLen, (nexty+<span class="number">1</span>) * m.SquareLen, (nextx+<span class="number">1</span>) * m.SquareLen)</span><br><span class="line">			DrawRectangle(forwardImg[forwardCounter].MapImage,rect,<span class="number">5</span>)	</span><br><span class="line">			anim.Image = <span class="built_in">append</span>(anim.Image,forwardImg[forwardCounter].MapImage)</span><br><span class="line">			forwardCounter += <span class="number">1</span></span><br><span class="line">			anim.Delay = <span class="built_in">append</span>(anim.Delay,<span class="number">60</span>)<span class="comment">//加入gif图像,设置帧间间隔60ms</span></span><br><span class="line">			<span class="comment">/*===== end =====*/</span></span><br><span class="line"></span><br><span class="line">			dfs(m,nextx,nexty,step+<span class="number">1</span>,forwardCounter)</span><br><span class="line">			</span><br><span class="line">			<span class="comment">/*======= 绘制回退图像 =======*/</span></span><br><span class="line">			<span class="keyword">for</span> _x := <span class="number">0</span>; _x &lt; <span class="number">4</span>; _x++ &#123;</span><br><span class="line">				<span class="keyword">for</span> _y := <span class="number">0</span>; _y &lt; <span class="number">5</span>; _y++ &#123;</span><br><span class="line">					<span class="keyword">if</span> ( book[_y][_x] == <span class="number">1</span> )&#123;</span><br><span class="line">						rect := image.Rect(_x * m.SquareLen, _y * m.SquareLen, (_x+<span class="number">1</span>) * m.SquareLen, (_y+<span class="number">1</span>) * m.SquareLen)</span><br><span class="line">						DrawRectangle(rollbackImg[rollbackCounter].MapImage,rect,<span class="number">2</span>)		</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			rect2 := image.Rect(nexty * m.SquareLen, nextx * m.SquareLen, (nexty+<span class="number">1</span>) * m.SquareLen, (nextx+<span class="number">1</span>) * m.SquareLen)</span><br><span class="line">			DrawRectangle(rollbackImg[rollbackCounter].MapImage,rect2,<span class="number">3</span>)</span><br><span class="line">			anim.Image = <span class="built_in">append</span>(anim.Image,rollbackImg[rollbackCounter].MapImage)</span><br><span class="line">			rollbackCounter += <span class="number">1</span>;</span><br><span class="line">			anim.Delay = <span class="built_in">append</span>(anim.Delay,<span class="number">60</span>)<span class="comment">//加入gif图像,设置帧间间隔60ms</span></span><br><span class="line">			<span class="comment">/*===== end =======*/</span></span><br><span class="line"></span><br><span class="line">			book[nextx][nexty] = <span class="number">0</span>	<span class="comment">//回退路径</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	imgfile, _ := os.Create(fmt.Sprintf(<span class="string">"map.png"</span>))</span><br><span class="line">	giffile, _ := os.Create(fmt.Sprintf(<span class="string">"map.gif"</span>))</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> MazeMap Map</span><br><span class="line">	<span class="comment">//初始化地图数据</span></span><br><span class="line">	MazeMap.Entinexty = MapArr</span><br><span class="line">	MazeMap.SquareLen = <span class="number">60</span></span><br><span class="line">	MazeMap.MapImage = image.NewPaletted(image.Rect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">240</span>, <span class="number">300</span>),palette)</span><br><span class="line">	MazeMap.DrawTheMap()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	book[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span></span><br><span class="line">	dfs(&amp;MazeMap,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,forwardCounter)</span><br><span class="line">	fmt.Println(min)</span><br><span class="line"></span><br><span class="line">	err := png.Encode(imgfile, MazeMap.MapImage)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Fatal(err)</span><br><span class="line">		fmt.Printf(<span class="string">"error is genrate\n"</span>)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	err = gif.EncodeAll(giffile,&amp;anim)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">        log.Fatal(err)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/07/17/C/note/">C语言不知道的知识汇总</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-07-17</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-12-31</span></span></div></header><div class="post-body"><div class="post-excerpt"><ul>
 <li>位域</li>
 </ul>
 <p>结构体中的冒号表示位域。位域出现的原因是由于某些信息的存储表示只需要几个bit位就可以表示而不需要一个完整的字节，同时也是为了节省存储空间和方便处理。</p>
@@ -45,27 +59,27 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <li><p>位域的本质上就是一种结构体类型，不同的是其成员是按二进制位来分配的。</p>
 </li>
 </ol>
-<p>[详细示例]：<a href="https://blog.csdn.net/yihongxiaoxiang/article/details/50327587" target="_blank" rel="noopener">https://blog.csdn.net/yihongxiaoxiang/article/details/50327587</a></p>
+<p>[详细示例]：<span class="exturl"><a class="exturl__link"   href="https://blog.csdn.net/yihongxiaoxiang/article/details/50327587"  target="_blank" rel="noopener">https://blog.csdn.net/yihongxiaoxiang/article/details/50327587</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 <ul>
 <li>static 关键字</li>
 </ul>
 <p>使用<strong>static</strong>关键字定义在头文件中的变量，其修饰的全局变量的作用域为定义的源文件。在多个源文件中引用该头文件，相当于每个变量都会在引用该头文件的源文件中定义一次。</p>
 
         <h4 id="一些实用的写法"   >
-          <a href="#一些实用的写法" class="heading-link"><i class="fas fa-link"></i></a>一些实用的写法</h4>
+          <a href="#一些实用的写法" class="heading-link"><i class="fas fa-link"></i></a><a href="#一些实用的写法" class="headerlink" title="一些实用的写法"></a>一些实用的写法</h4>
       <figure class="highlight c"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CHECK_STATE_FLAG(flag, state)\</span></span><br><span class="line">    <span class="keyword">do</span>&#123;\</span><br><span class="line">        <span class="keyword">if</span>(flag != state)\</span><br><span class="line">        &#123;\</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"func:%s,line:%d,flag statue fail\n"</span>,__FUNCTION__,__LINE__);\</span><br><span class="line">            <span class="keyword">return</span> FAILURE;\</span><br><span class="line">        &#125;\</span><br><span class="line">    &#125;<span class="keyword">while</span>(<span class="number">0</span>)</span><br><span class="line"><span class="comment">//仔细体会这个函数宏，真的是一种非常巧妙的用法，尽管功能简单，却能够在各处有需要的地方调用，</span></span><br><span class="line"><span class="comment">//并显示所在位置。就像面向对象语言中的错误处理，错误抛出一样实用。</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> UARTMSG_LOCK()   pthread_mutex_lock(&amp;g_tUartMsgMutex);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> UARTMSG_UNLOCK() pthread_mutex_unlock(&amp;g_tUartMsgMutex);</span></span><br><span class="line"><span class="comment">//这只是一个简单的宏定义用法，但事实上，当代码里充斥着这种编写风格与思想时，代码的可阅读性确实</span></span><br><span class="line"><span class="comment">//有很大的提高。</span></span><br><span class="line"><span class="comment">// 短整型大小端互换</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> BigLittleSwap16(A)  ((((short int)(A) &amp; 0xff00) &gt;&gt; 8) | \</span></span><br><span class="line">                             (((short <span class="keyword">int</span>)(A) &amp; <span class="number">0x00ff</span>) &lt;&lt; <span class="number">8</span>))</span><br><span class="line"><span class="comment">// 长整型大小端互换</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> BigLittleSwap32(A)  ((((long int)(A)  &amp; 0xff000000) &gt;&gt; 24) | \</span></span><br><span class="line">                             (((<span class="keyword">long</span> <span class="keyword">int</span>)(A)  &amp; <span class="number">0x00ff0000</span>) &gt;&gt; <span class="number">8</span>) | \</span><br><span class="line">                             (((<span class="keyword">long</span> <span class="keyword">int</span>)(A)  &amp; <span class="number">0x0000ff00</span>) &lt;&lt; <span class="number">8</span>) | \</span><br><span class="line">                             (((<span class="keyword">long</span> <span class="keyword">int</span>)(A)  &amp; <span class="number">0x000000ff</span>) &lt;&lt; <span class="number">24</span>))</span><br></pre></td></tr></table></div></figure>
 
 </div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/07/17/golang/characteristic/note/">Golang - 语言特性</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-07-17</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-07-17</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h1 id="GOLANG-语言特性"   >
-          <a href="#GOLANG-语言特性" class="heading-link"><i class="fas fa-link"></i></a>GOLANG 语言特性</h1>
+          <a href="#GOLANG-语言特性" class="heading-link"><i class="fas fa-link"></i></a><a href="#GOLANG-语言特性" class="headerlink" title="GOLANG 语言特性"></a>GOLANG 语言特性</h1>
       </div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/07/17/SQL/mysql/note/">mysql基础知识</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-07-17</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-12-31</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>[TOC]</p>
 
         <h3 id="声明"   >
-          <a href="#声明" class="heading-link"><i class="fas fa-link"></i></a>声明</h3>
+          <a href="#声明" class="heading-link"><i class="fas fa-link"></i></a><a href="#声明" class="headerlink" title="声明"></a>声明</h3>
       <p>以下所有相关命令行内容均基于ubuntu18.04。具体学习过程源自书籍《MySQL必知必会》。</p>
 
         <h3 id="关系数据库的基础知识"   >
-          <a href="#关系数据库的基础知识" class="heading-link"><i class="fas fa-link"></i></a>关系数据库的基础知识</h3>
+          <a href="#关系数据库的基础知识" class="heading-link"><i class="fas fa-link"></i></a><a href="#关系数据库的基础知识" class="headerlink" title="关系数据库的基础知识"></a>关系数据库的基础知识</h3>
       <ul>
 <li>关系表</li>
 </ul>
@@ -84,7 +98,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <p><strong>外键</strong>：外键为某个表中的一列，它包含另一个表的主键值，定义了两个表之间的关系。</p>
 
         <h3 id="MySQL的登录"   >
-          <a href="#MySQL的登录" class="heading-link"><i class="fas fa-link"></i></a>MySQL的登录</h3>
+          <a href="#MySQL的登录" class="heading-link"><i class="fas fa-link"></i></a><a href="#MySQL的登录" class="headerlink" title="MySQL的登录"></a>MySQL的登录</h3>
       <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -h 127.0.0.1 -u root -p</span><br></pre></td></tr></table></div></figure>
 
 <p>参数说明：</p>
@@ -95,31 +109,31 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </ul>
 
         <h3 id="建立一个新的数据库"   >
-          <a href="#建立一个新的数据库" class="heading-link"><i class="fas fa-link"></i></a>建立一个新的数据库</h3>
+          <a href="#建立一个新的数据库" class="heading-link"><i class="fas fa-link"></i></a><a href="#建立一个新的数据库" class="headerlink" title="建立一个新的数据库"></a>建立一个新的数据库</h3>
       <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE learning;</span><br></pre></td></tr></table></div></figure>
 
 <p>这样就创建了一个名为 <em>learning</em> 的数据库（数据源）</p>
 
         <h3 id="使用一个指定的数据库"   >
-          <a href="#使用一个指定的数据库" class="heading-link"><i class="fas fa-link"></i></a>使用一个指定的数据库</h3>
+          <a href="#使用一个指定的数据库" class="heading-link"><i class="fas fa-link"></i></a><a href="#使用一个指定的数据库" class="headerlink" title="使用一个指定的数据库"></a>使用一个指定的数据库</h3>
       <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USE learning;</span><br></pre></td></tr></table></div></figure>
 
 
         <h3 id="执行SQL脚本文件"   >
-          <a href="#执行SQL脚本文件" class="heading-link"><i class="fas fa-link"></i></a>执行SQL脚本文件</h3>
+          <a href="#执行SQL脚本文件" class="heading-link"><i class="fas fa-link"></i></a><a href="#执行SQL脚本文件" class="headerlink" title="执行SQL脚本文件"></a>执行SQL脚本文件</h3>
       <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source XX.sql</span><br></pre></td></tr></table></div></figure>
 
 <p>注意：XX.sql 需要路径支持</p>
 
         <h3 id="显示内容"   >
-          <a href="#显示内容" class="heading-link"><i class="fas fa-link"></i></a>显示内容</h3>
+          <a href="#显示内容" class="heading-link"><i class="fas fa-link"></i></a><a href="#显示内容" class="headerlink" title="显示内容"></a>显示内容</h3>
       <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SHOW DATABASES; &#x2F;&#x2F;显示存在的数据库</span><br><span class="line">SHOW TABLES;	&#x2F;&#x2F;显示当前数据库存在的表</span><br><span class="line">SHOW COLUMNS FROM TABLES;	&#x2F;&#x2F;显示表列</span><br></pre></td></tr></table></div></figure>
 
 
 
 
         <h3 id="检索数据"   >
-          <a href="#检索数据" class="heading-link"><i class="fas fa-link"></i></a>检索数据</h3>
+          <a href="#检索数据" class="heading-link"><i class="fas fa-link"></i></a><a href="#检索数据" class="headerlink" title="检索数据"></a>检索数据</h3>
       <ol>
 <li><strong>数据的格式化是一个表示问题，而不是一个检索问题</strong></li>
 </ol>
@@ -155,7 +169,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <p>返回不多于5行，从第  行0  开始（位置参数为0）。</p>
 
         <h3 id="排序检索数据"   >
-          <a href="#排序检索数据" class="heading-link"><i class="fas fa-link"></i></a>排序检索数据</h3>
+          <a href="#排序检索数据" class="heading-link"><i class="fas fa-link"></i></a><a href="#排序检索数据" class="headerlink" title="排序检索数据"></a>排序检索数据</h3>
       <ol>
 <li><strong>关系数据库设计理论认为，如果不明确规定排序顺序，则不应该假定检索出的数据的顺序有意义</strong></li>
 </ol>
@@ -189,7 +203,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <p>注意： 与 <code>DISTINCT</code> 关键字不同，<code>DESC</code> 关键字只应用到直接位于其前面的列名。在上述排序命令中，降序只对待检索列名1进行指定，而待检索列名2仍然以默认的升序进行排序。</p>
 
         <h3 id="过滤数据"   >
-          <a href="#过滤数据" class="heading-link"><i class="fas fa-link"></i></a>过滤数据</h3>
+          <a href="#过滤数据" class="heading-link"><i class="fas fa-link"></i></a><a href="#过滤数据" class="headerlink" title="过滤数据"></a>过滤数据</h3>
       <p>只检索所需数据需要指定 <em>搜索条件(search criteria)</em> ，搜索条件也成为 _过滤条件_。</p>
 <ol>
 <li><strong>MySQL在执行匹配时默认不区分大小写</strong></li>
@@ -336,7 +350,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
 
         <h3 id="正则表达式搜索"   >
-          <a href="#正则表达式搜索" class="heading-link"><i class="fas fa-link"></i></a>正则表达式搜索</h3>
+          <a href="#正则表达式搜索" class="heading-link"><i class="fas fa-link"></i></a><a href="#正则表达式搜索" class="headerlink" title="正则表达式搜索"></a>正则表达式搜索</h3>
       <p>MySQL使用<code>WHERE</code>对正则表达式提供了初步的支持，允许你指定正则表达式，过滤<code>SELECT</code>检索出来的数据。</p>
 <ol>
 <li><p><strong>MySQL仅支持多数正则表达式实现的一个很小的子集</strong>。</p>
@@ -528,7 +542,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
 
         <h3 id="创建计算字段"   >
-          <a href="#创建计算字段" class="heading-link"><i class="fas fa-link"></i></a>创建计算字段</h3>
+          <a href="#创建计算字段" class="heading-link"><i class="fas fa-link"></i></a><a href="#创建计算字段" class="headerlink" title="创建计算字段"></a>创建计算字段</h3>
       <ul>
 <li>拼接</li>
 </ul>
@@ -569,7 +583,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
 
         <h3 id="使用数据处理函数"   >
-          <a href="#使用数据处理函数" class="heading-link"><i class="fas fa-link"></i></a>使用数据处理函数</h3>
+          <a href="#使用数据处理函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#使用数据处理函数" class="headerlink" title="使用数据处理函数"></a>使用数据处理函数</h3>
       <p>SQL支持利用函数来处理数据。函数一般是在数据上执行的，它给数据的转换和处理提供了方便。</p>
 <p><strong>函数没有SQL的可移植性强，如果决定使用函数，应该保证做好代码注释</strong></p>
 <p><strong>大多数SQL实现支持以下类型的函数：</strong></p>
@@ -761,7 +775,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </tbody></table></div>
 
         <h3 id="汇总数据"   >
-          <a href="#汇总数据" class="heading-link"><i class="fas fa-link"></i></a>汇总数据</h3>
+          <a href="#汇总数据" class="heading-link"><i class="fas fa-link"></i></a><a href="#汇总数据" class="headerlink" title="汇总数据"></a>汇总数据</h3>
       <ul>
 <li>聚集 函数</li>
 </ul>
@@ -835,7 +849,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
 
         <h3 id="分组数据"   >
-          <a href="#分组数据" class="heading-link"><i class="fas fa-link"></i></a>分组数据</h3>
+          <a href="#分组数据" class="heading-link"><i class="fas fa-link"></i></a><a href="#分组数据" class="headerlink" title="分组数据"></a>分组数据</h3>
       <ul>
 <li>数据分组</li>
 </ul>
@@ -848,7 +862,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
 <p>说明：上述的<code>SELECT</code>语句指定了两个列，vend_id包含产品供应商的ID,num_prods为计算字段(用COUNT(*)函数建立)。<code>GROUP BY</code>子句指示MySQL按照vend_id排序并分组数据。这导致对每个vend_id而不是整个表计算num_prods一次。从输出中可以看到，供应商1001有3个产品，供应商1002有2个产品，供应商1003有7个产品，而供应商1005有2个产品。</p>
 <p><code>GROUP BY</code>子句后还可以跟<code>WITH ROLLUP</code>关键字，表示在分组统计的基础上再次进行汇总统计（在每个分组下都会有汇总统计）。</p>
-<p>[更多内容参考][<a href="https://blog.csdn.net/qq_42254088/article/details/81904819]" target="_blank" rel="noopener">https://blog.csdn.net/qq_42254088/article/details/81904819]</a></p>
+<p>[更多内容参考][<span class="exturl"><a class="exturl__link"   href="https://blog.csdn.net/qq_42254088/article/details/81904819]"  target="_blank" rel="noopener">https://blog.csdn.net/qq_42254088/article/details/81904819]</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT vend_id,COUNT(*) AS num_prods</span><br><span class="line">FROM products</span><br><span class="line">GROUP BY vend_id WITH ROLLUP;</span><br></pre></td></tr></table></div></figure>
 
 <p>示例输出：</p>
@@ -894,7 +908,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <p>仅管我们经常发现用<code>GROUP BY</code>分组的数据确实以分组顺序输出，但情况并不总是这样，它不是SQL规范所要求的。因此一般在使用<code>GROUP BY</code>时也应该给出<code>ORDER BY</code>,以保证数据正确排序。</p>
 
         <h3 id="SELECT字句顺序表"   >
-          <a href="#SELECT字句顺序表" class="heading-link"><i class="fas fa-link"></i></a>SELECT字句顺序表</h3>
+          <a href="#SELECT字句顺序表" class="heading-link"><i class="fas fa-link"></i></a><a href="#SELECT字句顺序表" class="headerlink" title="SELECT字句顺序表"></a>SELECT字句顺序表</h3>
       <div class="table-container"><table>
 <thead>
 <tr>
@@ -941,7 +955,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </tbody></table></div>
 
         <h3 id="子查询"   >
-          <a href="#子查询" class="heading-link"><i class="fas fa-link"></i></a>子查询</h3>
+          <a href="#子查询" class="heading-link"><i class="fas fa-link"></i></a><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h3>
       <p><strong>查询(query)</strong>:任何SQL语句都是查询。但此术语一般值<code>SELECT</code>语句。</p>
 <p>SQL在版本4.1开始引入子查询的支持。<strong>子查询(subquery)</strong>即嵌套在其他查询中的查询。</p>
 <ol>
@@ -963,7 +977,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <p>说明：在这个示例中，使用了<strong>完全限定列名</strong>。这里还涉及到了一个新的概念，<strong>相关子查询(correlated  subquery)</strong>，涉及外部查询的子查询。任何时候只要列名可能有多义性，就必须使用这种语法（表名和列名由一个句点分隔）。</p>
 
         <h3 id="联结表"   >
-          <a href="#联结表" class="heading-link"><i class="fas fa-link"></i></a>联结表</h3>
+          <a href="#联结表" class="heading-link"><i class="fas fa-link"></i></a><a href="#联结表" class="headerlink" title="联结表"></a>联结表</h3>
       <p>SQL最强大的功能之一就是能在数据检索查询的执行中<strong>联结(join)</strong>表。</p>
 <p><strong>联结</strong>：简单的说联结是一种机制，它不是物理实体，它用来在一条<code>SELECT</code>语句中关联表。联结在运行时关联表中            正确的行。</p>
 <ol>
@@ -1075,7 +1089,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </ol>
 
         <h3 id="组合查询"   >
-          <a href="#组合查询" class="heading-link"><i class="fas fa-link"></i></a>组合查询</h3>
+          <a href="#组合查询" class="heading-link"><i class="fas fa-link"></i></a><a href="#组合查询" class="headerlink" title="组合查询"></a>组合查询</h3>
       <p>多数SQL查询都只包含从一个或多个表中返回数据的单条<code>SELECT</code>语句。MySQL也允许执行多个查询（多条<code>SELECT</code>语句），并将结果作为单个查询结果集返回。这些组合查询通常称为<strong>并</strong>或<strong>复合查询</strong>。</p>
 <p>有两种基本情况，其中需要使用组合查询：</p>
 <ol>
@@ -1111,7 +1125,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
 
         <h3 id="全文本搜索"   >
-          <a href="#全文本搜索" class="heading-link"><i class="fas fa-link"></i></a>全文本搜索</h3>
+          <a href="#全文本搜索" class="heading-link"><i class="fas fa-link"></i></a><a href="#全文本搜索" class="headerlink" title="全文本搜索"></a>全文本搜索</h3>
       <p>虽然<strong>通配符</strong>及<strong>正则表达式</strong>它们作为搜索机制非常有用，但仍存在几个重要的限制：</p>
 <ol>
 <li>性能—-通配符和正则表达式匹配通常要求MySQL尝试匹配表中所有行（而且这些搜索极少使用表索引）。因此，由于被搜索行数不断增加，这些搜索可能非常耗时。</li>
@@ -1247,7 +1261,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </ol>
 
         <h3 id="插入数据"   >
-          <a href="#插入数据" class="heading-link"><i class="fas fa-link"></i></a>插入数据</h3>
+          <a href="#插入数据" class="heading-link"><i class="fas fa-link"></i></a><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h3>
       <p>使用<code>INSERT</code>语句来插入或添加行到数据库表，插入可以用几种方式使用：</p>
 <ol>
 <li>插入完整的行</li>
@@ -1299,7 +1313,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <p>如果数据检索是最重要的，可以通过在<code>INSERT</code>和<code>INTO</code>之间添加关键字<code>LOW_PRIORITY</code>，指示MySQL降低<code>INSERT</code>语句的优先级。如：<code>INSERT LOW_PRIORITY INTO</code>。</p>
 
         <h3 id="更新和删除数据"   >
-          <a href="#更新和删除数据" class="heading-link"><i class="fas fa-link"></i></a>更新和删除数据</h3>
+          <a href="#更新和删除数据" class="heading-link"><i class="fas fa-link"></i></a><a href="#更新和删除数据" class="headerlink" title="更新和删除数据"></a>更新和删除数据</h3>
       <p>为了更新(修改)表中的数据，可以使用<code>UPDATE</code>语句。可采用两种方式使用<code>UPDATE</code>：</p>
 <ol>
 <li><p>更新表中的特定行</p>
@@ -1345,7 +1359,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </ol>
 
         <h3 id="创建和操纵表"   >
-          <a href="#创建和操纵表" class="heading-link"><i class="fas fa-link"></i></a>创建和操纵表</h3>
+          <a href="#创建和操纵表" class="heading-link"><i class="fas fa-link"></i></a><a href="#创建和操纵表" class="headerlink" title="创建和操纵表"></a>创建和操纵表</h3>
       <ul>
 <li>创建表</li>
 </ul>
@@ -1459,7 +1473,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
 
         <h3 id="视图"   >
-          <a href="#视图" class="heading-link"><i class="fas fa-link"></i></a>视图</h3>
+          <a href="#视图" class="heading-link"><i class="fas fa-link"></i></a><a href="#视图" class="headerlink" title="视图"></a>视图</h3>
       <p>视图是虚拟的表。与包含数据的表不一样，视图只包含使用时动态检索数据的查询。</p>
 <p><strong>作为视图，它不包含表中应该有的数据，它包含的是一个SQL查询。</strong></p>
 <p><strong>视图仅仅是用来查看存储在别处的数据的一种设施。视图本身不包含数据，因此它们返回的数据是从其他表中检索出来的。在添加或更改这些表中的数据时，视图将返回改变后的数据。</strong></p>
@@ -1523,7 +1537,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </ol>
 
         <h3 id="存储过程"   >
-          <a href="#存储过程" class="heading-link"><i class="fas fa-link"></i></a>存储过程</h3>
+          <a href="#存储过程" class="heading-link"><i class="fas fa-link"></i></a><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h3>
       <p>存储过程简单来说，就是为以后的使用而保存的一条或多条MySQL语句的集合。</p>
 <ul>
 <li>为什么使用存储过程</li>
@@ -1601,7 +1615,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
 
         <h3 id="游标"   >
-          <a href="#游标" class="heading-link"><i class="fas fa-link"></i></a>游标</h3>
+          <a href="#游标" class="heading-link"><i class="fas fa-link"></i></a><a href="#游标" class="headerlink" title="游标"></a>游标</h3>
       <p>游标(cursor)是一个存储在MySQL服务器上的数据库查询，它不是一条<code>SELECT</code>语句，而是被该语句检索出来的结果集。在存储了游标之后，应用程序可以根据需要滚动或浏览其中的数据。游标主要用户交互式应用。</p>
 <ul>
 <li>使用游标</li>
@@ -1639,7 +1653,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <p>这条语句定义了一个<code>CONTINUE HANDLER</code>,它是在条件出现时被执行的代码。它指出当<code>SQLSTATE &#39;02000&#39;</code>出现时，<code>SET done=1</code>。<code>SQLSTATE &#39;02000&#39;</code>是一个未找到条件，当<code>REPEAT</code>由于没有更多的行供循环而不能继续时，出现这个条件。</p>
 
         <h3 id="触发器"   >
-          <a href="#触发器" class="heading-link"><i class="fas fa-link"></i></a>触发器</h3>
+          <a href="#触发器" class="heading-link"><i class="fas fa-link"></i></a><a href="#触发器" class="headerlink" title="触发器"></a>触发器</h3>
       <p>触发器是MySQL响应以下任意语句而自动执行的一条MySQL语句(或位于<code>BEGIN</code>和<code>END</code>语句之间的一组语句):</p>
 <ol>
 <li><code>DELETE</code></li>
@@ -1699,202 +1713,9 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <li>在BEFORE UPDATE触发器中，NEW中的值可能也被更新(允许更改将用于<code>UPDATE</code>语句中的值)；</li>
 <li>OLD中的值全都是只读的，不能更新。</li>
 </ol>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/07/17/Docker/note/">Docker基础知识</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-07-17</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2021-02-09</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h4 id="重要概念："   >
-          <a href="#重要概念：" class="heading-link"><i class="fas fa-link"></i></a>重要概念：</h4>
-      
-        <h4 id="Docker镜像"   >
-          <a href="#Docker镜像" class="heading-link"><i class="fas fa-link"></i></a>Docker镜像</h4>
-      <p>类似于虚拟机镜像，可以将它理解为一个面向Docker引擎的只读模板，包含了文件系统。镜像是创建Docker容器的基础。通过版本管理和增量的文件系统，Docker提供了一套十分简单的机制来创建和更新现有的镜像。</p>
-<p>镜像文件一般由若干层组成，层其实是AUFS(Advanced File System,一种联合文件系统)中的重要概念，是实现增量保存与更新的基础。</p>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">  sudo docker pull ubuntu:14.04 <span class="comment">#下载14.04标签的镜像</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker pull dl.dockerpool.com:5000/ubuntu <span class="comment">#选择从DockerPool社区的镜像源下载</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run -t -i ubuntu /bin/bash <span class="comment">#利用镜像创建一个容器并在其中运行bash应用</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker images <span class="comment">#列出本地主机上已有的所有镜像，镜像ID的信息十分重要，它唯一标识镜像</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">可以使用docker tag命令为本地镜像添加新的标签，例如添加一个新的ubuntu:latest镜像标签</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker tag dl.dockerpool.com:5000/ubuntu:latest ubuntu:latest</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker inspect 5506de2b643b <span class="comment">#可以获取镜像的详细信息，其返回一个JSON格式的消息</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker search mysql <span class="comment">#搜索远端仓库中共享的镜像，默认搜官方仓库，输出结果按星际评价排序</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">可以删除镜像，其中IMAGE可以为标签或ID.(*当IMAGE是标签时，只有在镜像只剩一个标签时才会删除该镜像文件的所有AUFS层)</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker rmi [IMAGE]</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker rm [ID] <span class="comment">#删除容器</span></span></span><br></pre></td></tr></table></div></figure>
-
-<p><strong>创建镜像</strong></p>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">  sudo docker commit [OPTIONS] </span></span><br><span class="line"><span class="meta">#</span><span class="bash">OPTIONS = -a,--author=<span class="string">""</span>作者信息</span></span><br><span class="line"><span class="meta">#</span><span class="bash">OPTIONS = -m,--message=<span class="string">""</span>提交信息</span></span><br><span class="line"><span class="meta">#</span><span class="bash">OPTIONS = -p,--pause=<span class="literal">true</span>提交时暂停容器运行</span></span><br><span class="line"><span class="meta">#</span><span class="bash">启动一个容器并运行一些操作后，该容器和原镜像相比，已经发生了改变，可以使用docker commit命令来提交为一个新的镜像。提交时可以使用ID或名称来指定容器。</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo docker commit -m <span class="string">"Add a new file"</span> -a <span class="string">"Docker Newbee"</span> a925cb403f0 <span class="built_in">test</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">运行顺利的话，命令返回新创建的镜像的ID信息</span></span><br></pre></td></tr></table></div></figure>
-
-<p><strong>基于本地模板导入</strong></p>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">也可以直接从一个操作系统模板文件导入一个镜像。</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo cat ubuntu-14.04-x86_64-minimal.tar.gz |docker import - ubuntu:14.04</span></span><br></pre></td></tr></table></div></figure>
-
-<p><strong>存出和载入镜像</strong></p>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">存出镜像到本地文件</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker save -o ubuntu_14.04.tar ubuntu:14.04</span></span><br><span class="line"><span class="meta">#</span><span class="bash">从存出的本地文件再导入到本地镜像库</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker load --input ubuntu_14.04.tar</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker load &lt; ubuntu_14.04.tar</span></span><br></pre></td></tr></table></div></figure>
-
-<p><strong>上传镜像</strong></p>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">使用docker push上传镜像到仓库，默认上传到DockerHub官方仓库（需要登录）</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker tag <span class="built_in">test</span>:latest user/<span class="built_in">test</span>:latest</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker push user/<span class="built_in">test</span>:latest</span></span><br></pre></td></tr></table></div></figure>
-
-
-
-
-        <h4 id="Docker容器"   >
-          <a href="#Docker容器" class="heading-link"><i class="fas fa-link"></i></a>Docker容器</h4>
-      <p>类似于一个轻量级的沙箱，Docker利用容器来运行和隔离应用。容器是从镜像创建的应用运行实例，可以将其启动、开始、停止、删除，而这些容器是<strong>相互隔离、不可见的</strong>。</p>
-<p>Docker带有<strong>额外的可写文件层</strong>。如果认为虚拟机是模拟运行的一整套操作系统（提供了运行态环境和其他系统环境）和跑在上面的应用。那么Docker容器就是独立运行的一个或一组应用，以及他们的必须环境。</p>
-<p><strong>新建与启动容器</strong></p>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">使用docker create可以新建一个容器.使用该命令创建的容器处于停止状态，可以使用docker start命令来启动它</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker create -it ubuntu:latest</span></span><br><span class="line"><span class="meta">#</span><span class="bash">使用docker run等价于先执行docker create 再执行 docker start</span></span><br><span class="line"><span class="meta">#</span><span class="bash">下面的命令输出一个hello world ，之后容器将自动终止</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run ubuntu /bin/<span class="built_in">echo</span> <span class="string">'hello world'</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">如果添加 --rm 标记，则容器在终止后会立刻删除</span></span><br></pre></td></tr></table></div></figure>
-
-<p><strong>使用docker run创建容器，后台运行的标准操作</strong>包括：</p>
-<ol>
-<li>检查本地是否存在指定的镜像，不存在则从公有仓库下载</li>
-<li>利用镜像创建并启动一个容器</li>
-<li>分配一个文件系统，并在只读的镜像层外面挂载一层可读写层</li>
-<li>从宿主主机配置的网桥接口中桥接一个虚拟接口到容器中去</li>
-<li>从地址池配置一个IP地址给容器</li>
-<li>执行用户指定的应用程序</li>
-<li>执行完毕后容器被终止</li>
-</ol>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">下面命令将启动一个bash终端，并允许用户交互</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run -t -i ubuntu:14.04 /bin/bash </span></span><br><span class="line"><span class="meta">#</span><span class="bash">使用-t选项可以让Docker分配一个伪终端并绑定到容器的标准输入上</span></span><br><span class="line"><span class="meta">#</span><span class="bash">使用-i选型可以让容器的标准输入保持打开</span></span><br></pre></td></tr></table></div></figure>
-
-<p><em>Docker容器认为，当运行的应用退出后，容器也没有了继续运行的必要</em></p>
-<p><strong>守护态运行</strong></p>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run -d ubuntu /bin/sh -c <span class="string">"while true;do echo hello world;sleep 1;done"</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> -d选项能够让容器在后台以守护态形式运行</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> --rm和-d参数不能同时使用</span></span><br></pre></td></tr></table></div></figure>
-
-<p><strong>终止容器</strong></p>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">可以使用docker stop来终止一个运行中的容器</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker stop ce5</span></span><br></pre></td></tr></table></div></figure>
-
-<p><strong>进入容器</strong></p>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">  sudo docker attach nostalgic_hypatia</span></span><br><span class="line"><span class="meta">#</span><span class="bash">使用attach命令，当多个窗口同时attach到同一个容器时，所有的窗口都会同步显示，一个窗口阻塞全都阻塞</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker <span class="built_in">exec</span> -ti 243c32535da7 /bin/bash</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="built_in">exec</span>能避免attach的问题</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo nsenter --target 10981 --mount --uts --ipc --net --pid</span></span><br><span class="line"><span class="meta">#</span><span class="bash">为了使用nsenter连接到容器，还需要找到容器的进程PID</span></span><br></pre></td></tr></table></div></figure>
-
-<p><strong>删除容器</strong></p>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">  sudo docker rm [OPTIONS] CONTAINER [CONTAINER...]</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> -f, --force=flase强行终止并删除一个运行中的容器</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> -l, --link=flase删除容器的连接，但保留容器</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> -v, --volumes=<span class="literal">false</span> 删除容器挂载的数据卷</span></span><br></pre></td></tr></table></div></figure>
-
-<p><strong>导入和导出容器</strong></p>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">  sudo docker <span class="built_in">export</span> CONTAINER</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker <span class="built_in">export</span> ce5 &gt;test_for_run.tar  <span class="comment">#导出容器ce5到test_for_run.tar文件</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash">  cat test_for_run.tar | sudo docker import - <span class="built_in">test</span>/ubuntu:v1.0  </span></span><br><span class="line"><span class="meta">#</span><span class="bash">导出的文件可以用docker import 命令导入，成为镜像</span></span><br></pre></td></tr></table></div></figure>
-
-<p>实际上，既可以使用docker load命令来导入镜像存储文件到本地的镜像库，又可以使用docker import命令来导入一个容器快照到本地镜像库。二者的区别在于容器快照文件将丢弃所有历史记录和元数据信息（即仅保存容器当时的快照状态），而镜像存储文件将保存完整记录，体积也比较大。</p>
-
-        <h4 id="Docker仓库"   >
-          <a href="#Docker仓库" class="heading-link"><i class="fas fa-link"></i></a>Docker仓库</h4>
-      <p>类似于代码仓库，是Docker集中存放镜像文件的场所。</p>
-<p><strong>创建和使用私有仓库</strong></p>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run -d -p 5000:5000 registry</span></span><br><span class="line"><span class="meta">#</span><span class="bash">这将自动下载并启动一个registry容器，创建本地的私有仓库服务</span></span><br><span class="line"><span class="meta">#</span><span class="bash">默认情况下会将仓库创建在容器的/tmp/registry目录下，可以用过-v参数指定存放路径</span></span><br><span class="line"><span class="meta">#</span><span class="bash">此时本地将启动一个私有仓库服务，监听端口为5000</span></span><br></pre></td></tr></table></div></figure>
-
-
-
-<ul>
-<li><strong>数据卷</strong></li>
-</ul>
-<p>数据卷是一个可供容器使用的特殊目录，它绕过文件系统，可以提供很多有用的特性：</p>
-<ol>
-<li>数据卷可以在容器之间共享和重用</li>
-<li>对数据卷的修改会立马生效</li>
-<li>对数据卷的更新不会影响镜像</li>
-<li>卷会一直存在，直到没有容器使用</li>
-</ol>
-<p>数据卷的使用，类似于Linux下对目录或文件进行mount操作。</p>
-<p><strong>创建数据卷</strong></p>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">使用docker run命令加 -v 标记可以在容器内创建一个数据卷，多次使用-v标记可以创建多个数据卷</span></span><br><span class="line"><span class="meta">#</span><span class="bash">下面使用training/webapp镜像创建一个web容器，并创建一个数据卷挂载到容器的/webapp目录：</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run -d -P --name web -v /webapp training/webapp python app.py</span></span><br><span class="line"><span class="meta">#</span><span class="bash">*使用-v标记也可以指定挂载一个本地的已有目录到容器中去作为数据卷。本地目录的路径必须是绝对路径，如果路径不<span class="comment">##存在，Docker会自动创建</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">下面的命令加载主机的/src/webapp目录到容器的/opt/webapp目录</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run -d -P --name web -v /src/webapp:/opt/webapp training/webapp python app.py</span></span><br><span class="line"><span class="meta">#</span><span class="bash">Docker挂载数据卷的默认权限是读写（rw），用户也可以通过，ro指定为只读</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run -d -P --name web -v /src/webapp:/opt/webapp:ro training/webapp python app.py </span></span><br><span class="line"><span class="meta">#</span><span class="bash">-v标记也可以从主机挂载单个文件到容器作为数据卷</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run --rm --it -v ~/.bash_history:/.bash_history ubuntu /bin/bash</span></span><br><span class="line"><span class="meta">#</span><span class="bash">这样就可以记录在容器里输入过的命令历史了</span></span><br></pre></td></tr></table></div></figure>
-
-<p><strong>数据卷容器</strong></p>
-<p>需要在容器之间共享一些持续更新的数据，最简答的方式是使用数据卷容器。数据卷容器其实就是一个普通的容器，只是专门用它来提供数据卷供其他容器挂载使用。</p>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">首先：创建一个数据卷容器dbdata,并在其中创建一个数据卷挂载到/dbdata</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run -it -v /dbdata --name dbdate ubuntu</span></span><br><span class="line"><span class="meta">#</span><span class="bash">然后：可以在其他容器中使用 --volumes-from来挂载dbdata容器中的数据卷</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run -it --volumes-from dbdata --name db1 ubuntu</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run -it --volumes-from dbdata --name db2 ubuntu</span></span><br><span class="line"><span class="meta">#</span><span class="bash">上面的命令将创建db1和db2两个容器，并从dbdata容器挂载数据卷，此时两个容器都挂载同一个数据卷到相同的<span class="comment">#/dbdata目录，三个容器任何一方在该目录下写入，其他容器都可以看到。</span></span></span><br></pre></td></tr></table></div></figure>
-
-<p>删除了挂载的容器，数据卷并不会被自动删除。如果要删除一个数据卷，必须在删除最后一个还挂载着它的容器时显式使用docker rm -v命令来指定同时删除关联的容器。</p>
-<p>可以利用数据卷容器对其中的数据卷进行备份、恢复，以实现数据的迁移。</p>
-<p><strong>备份</strong></p>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run --volumes-from dbdata -v $(<span class="built_in">pwd</span>):/backup --name worker ubuntu tar cvf /backup/backup.tar /dbdata</span></span><br><span class="line"><span class="meta">#</span><span class="bash">上面的命令首先利用ubuntu镜像创建了一个容器worker。使用--volumes-from dbdata参数让worker容器挂载<span class="comment">#dbdata容器的数据卷(即dbdata数据卷)；使用-v$(pwd):/backup参数来挂载本地的当前目录到worker容器的#/backup/目录。</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">work容器启动后，使用了tar cvf /backup/backup.tar /dbdata命令来将/dbdata下内容备份为容器内的<span class="comment">#/backup/backup.tar,即宿主主机当前目录下的backup.tar</span></span></span><br></pre></td></tr></table></div></figure>
-
-<p><strong>恢复</strong></p>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">首先要创建一个带有数据卷的容器dbdata2</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run -v /dbdata --name dbdata2 ubuntu /bin/bash</span></span><br><span class="line"><span class="meta">#</span><span class="bash">然后创建另一个新的容器，挂载dbdata2的容器，并使用untar解压备份文件到所挂载的容器卷中即可</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run --volumes -form dbdata2 -v $(<span class="built_in">pwd</span>):/backup busybox tar xvf /backup/backup.tar</span></span><br></pre></td></tr></table></div></figure>
-
-
-
-<ul>
-<li><strong>网络配置</strong></li>
-</ul>
-<p>Docker目前提供了映射容器端口到宿主主机和容器互联机制来为容器提供网络服务。除了使用端口映射机制来将容器内应用服务提供给外部网络，还可以通过容器互联系统让多个容器之间进行快捷的网络通信。</p>
-<p><strong>端口映射实现访问容器</strong></p>
-<p>在启动容器的时候，如果不指定对应参数，在容器外部是无法通过网络来访问容器内的网络应用和服务的。</p>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">通过 -P 或者 -p 参数可以指定端口映射。</span></span><br><span class="line"><span class="meta">#</span><span class="bash">当使用-P(大写的)标记时，Docker会随机映射一个49000~49900的端口至容器内部开放的网络端口</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run -d -P training/webapp python app.py</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker ps -l</span></span><br><span class="line"><span class="meta">#</span><span class="bash">上面的现象：本地主机的49155被映射到了容器的5000端口</span></span><br><span class="line"><span class="meta">#</span><span class="bash">访问宿主主机的49115端口即可访问容器内Web应用提供的界面</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> -p(小写的)则可以指定要映射的端口，注意，在一个指定端口上只可以绑定一个容器</span></span><br><span class="line"><span class="meta">#</span><span class="bash">支持的格式：ip:hostPort:containerPort | ip::containerPort | hostPort:containerPort</span></span><br><span class="line"><span class="meta">#</span></span><br><span class="line"><span class="meta">#</span><span class="bash">映射所有接口地址,此时默认会绑定本地所有接口上的所有地址</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run -d -p 5000:5000 training/webapp python app.py</span></span><br><span class="line"><span class="meta">#</span><span class="bash">映射到指定地址的指定端口 ip:hostPort:containerPort</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run -d -p 127.0.0.1:5000:5000 traning/webapp python app.py</span></span><br><span class="line"><span class="meta">#</span><span class="bash">映射到指定地址的任意端口 ip::containerPort</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run -d -p 127.0.0.1::5000 training/webapp python app.py</span></span><br><span class="line"><span class="meta">#</span><span class="bash">使用udp标记来指定udp端口</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run -d -p 127.0.0.1:5000:5000/udp training/webapp python app.py</span></span><br><span class="line"><span class="meta">#</span><span class="bash">查看映射端口配置</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker port</span></span><br></pre></td></tr></table></div></figure>
-
-<p><strong>容器的连接系统</strong></p>
-<p>它会在源和接收容器之间创建一个隧道，接收容器可以看到源容器指定的信息。</p>
-<p>连接系统依据容器的名称来执行，因此，首先需要自定义一个好记的容器名。自定义命名容器有两个好处：</p>
-<ol>
-<li>自定义的命名，比较好记</li>
-<li>当要连接其他容器时候，可以作为一个有用的参考点，比如连接web容器到db容器</li>
-</ol>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">使用--name标记可以为容器自定义命名：</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run -d -P --name web training/webapp python app.py</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker inspect -f <span class="string">"&#123;&#123;.name&#125;&#125;"</span> 2adab9c82959 <span class="comment">#可以查看容器的名字</span></span></span><br></pre></td></tr></table></div></figure>
-
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">使用--link参数可以让容器之间安全的进行交互</span></span><br><span class="line"><span class="meta">$</span><span class="bash">  sudo docker run -d -P --name web --link db:db training/webapp python app.py</span></span><br><span class="line"><span class="meta">#</span><span class="bash">上述命令将使db容器和web容器建立互联我关系</span></span><br><span class="line"><span class="meta">#</span><span class="bash">--link参数的格式为--link name:<span class="built_in">alias</span>,其中name是要连接的容器的名称，<span class="built_in">alias</span>是这个连接的别名。</span></span><br></pre></td></tr></table></div></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/07/16/helloworld/">页面生成测试</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-07-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-07-17</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h2 id="这是一篇测试文档"   >
-          <a href="#这是一篇测试文档" class="heading-link"><i class="fas fa-link"></i></a>这是一篇测试文档</h2>
+          <a href="#这是一篇测试文档" class="heading-link"><i class="fas fa-link"></i></a><a href="#这是一篇测试文档" class="headerlink" title="这是一篇测试文档"></a>这是一篇测试文档</h2>
       <figure class="highlight c"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"hello world\r\n"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 
