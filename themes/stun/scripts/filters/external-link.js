@@ -1,4 +1,5 @@
 'use strict'
+global.URL = require('url').URL;
 
 hexo.extend.filter.register(
   'after_post_render',

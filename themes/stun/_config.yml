@@ -950,7 +950,8 @@ cdn:
   # Example:
   # waline: //unpkg.com/@waline/client@0.8.5/dist/Waline.min.js
   waline:
-  # minivaline
+
+  # min_depthnivaline
   # See: https://github.com/MiniValine/MiniValine
   # Example:
   # minivaline: //cdn.jsdelivr.net/npm/minivaline/dist/MiniValine.min.js
