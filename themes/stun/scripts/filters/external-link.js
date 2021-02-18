@@ -13,8 +13,7 @@ hexo.extend.filter.register(
     }
 
     var config = this.config
-    //var url = new URL(config.url)
-    var url = require("url")
+    var url = new URL(config.url)
     var siteHost = url.hostname || config.url
     // Match 'a' tags that don't contain html children.
     var regPureATag = /<a([^>]*)href="([^"]*)"([^>]*)>([^<]*)<\/a>/gim
