@@ -138,11 +138,11 @@ header:
   height: 80%
   # Background image of site header.
   bg_image:
-    enable: false
+    enable: true
     # In theme directory (source/images): /images/avatar.png
     # In site directory (source/uploads): /uploads/avatar.png
     # You can also use a link of image.
-    url:
+    url: /images/header.jpg
   # Mask effect of the background image.
   mask:
     enable: false
@@ -152,7 +152,7 @@ header:
     # Height of the navigation bar (Supports all CSS units)
     height: 50px
     # Background color of the navigation bar (Please use "" to wrap the value).
-    bg_color: "#333"
+    bg_color: "#4B0082"
   # The icon that prompts the user to pull down.
   scroll_down_icon:
     enable: false
@@ -164,11 +164,11 @@ header:
 body:
   # Background image of site body.
   bg_image:
-    enable: false
+    enable: true
     # In theme directory (source/images): /images/avatar.png
     # In site directory (source/uploads): /uploads/avatar.png
     # You can also use a link of image.
-    url:
+    url: /images/blogbk.jpg
     # Whether to fixed the background image.
     fixed: true
     # Whether to repeat the image as much as possible to cover the entire area.
