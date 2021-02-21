@@ -45,10 +45,6 @@ tags:
 
 
 
-
-
-
-
 ### MySQL的登录
 
 ```
@@ -93,7 +89,7 @@ SHOW TABLES;	//显示当前数据库存在的表
 SHOW COLUMNS FROM TABLES;	//显示表列
 ```
 
-
+<!-- more -->
 
 ### 检索数据
 

@@ -85,6 +85,8 @@ $  sudo docker run ubuntu /bin/echo 'hello world'
 #如果添加 --rm 标记，则容器在终止后会立刻删除
 ```
 
+<!-- more -->
+
 **使用docker run创建容器，后台运行的标准操作**包括：
 
 1. 检查本地是否存在指定的镜像，不存在则从公有仓库下载

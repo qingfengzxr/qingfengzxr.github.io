@@ -72,7 +72,7 @@ type slice struct{
 3. slice需要做深度比较，因此不能用slice作为map的键。
 4. slice唯一允许的比较操作是和nil做比较。slice类型的零值是nil。值为nil的slice没有对应的底层数组。值得注意的是：值为nil的slice长度和容量都是零，但是也有非nil的slice长度和容量也是零，例如[]int{}或者make([]int,3)[3:0]。
 
-
+<!-- more -->
 
 #### map
 
