@@ -75,8 +75,8 @@ menu_settings:
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/icons/favicon-16x16.png
-  medium: /images/icons/favicon-32x32.png
+  small: /images/favicon_package_v0.16/favicon-16x16.png
+  medium: /images/favicon_package_v0.16/favicon-32x32.png
   # ! --------------------------------------------------
   # ! If you don't know the following, please ignore it.
   # ! --------------------------------------------------
