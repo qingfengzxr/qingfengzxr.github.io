@@ -7,7 +7,7 @@ tags:
   - Docker
 ---
 
-#### 重要概念：
+### 重要概念：
 
 #### Docker镜像
 
@@ -286,6 +286,13 @@ $  sudo docker run -d -P --name web --link db:db training/webapp python app.py
 #--link参数的格式为--link name:alias,其中name是要连接的容器的名称，alias是这个连接的别名。
 ```
 
+#### Docker的配置文件
+**允许任意IP的客户端连接**
+编辑配置文件 /etc/systemd/system/multi-user.target.wants/docker.service;
+_不同的操作系统，配置文件所在地可能有所不同，例如我的ubuntu20.0.4配置文件就放在
+/usr/lib/systemd/system/docker.service 下_
+
+在环境变量ExecStart后面添加-H tcp://0.0.0.0,即可允许任意的IP的客户端进行连接
 
 
 
